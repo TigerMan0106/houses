@@ -13,6 +13,18 @@ import managerApply from "../components/manager/managerApply";
 import managerRent from "../components/manager/managerRent";
 import managerRepair from "../components/manager/managerRepair";
 import managerMy from "../components/manager/managerMy";
+import tenantMessage from "../components/tenant/tenantMessage";
+import landlordMessage from "../components/landlord/landlordMessage";
+import tenantMy from "../components/tenant/tenantMy";
+import tenantHouse from "../components/tenant/tenantHouse";
+import tenantApply from "../components/tenant/tenantApply";
+import tenantRent from "../components/tenant/tenantRent";
+import tenantRepair from "../components/tenant/tenantRepair";
+import landlordMy from "../components/landlord/landlordMy";
+import landlordHouse from "../components/landlord/landlordHouse";
+import landlordApply from "../components/landlord/landlordApply";
+import landlordRent from "../components/landlord/landlordRent";
+import landlordRepair from "../components/landlord/landlordRepair";
 Vue.use(Router)
 
 export default new Router({
@@ -36,13 +48,63 @@ export default new Router({
       path: '/tenantMain',
       name: 'tenantMain',
       component: tenantMain,
-      children: []
+      children: [
+        {
+          path: '/tenantMessage',
+          component: tenantMessage
+        },
+        {
+          path: '/tenantMy',
+          component: tenantMy
+        },
+        {
+          path:'/tenantHouse',
+          component: tenantHouse
+        },
+        {
+          path:'/tenantApply',
+          component: tenantApply
+        },
+        {
+          path: '/tenantRent',
+          component: tenantRent
+        },
+        {
+          path: '/tenantRepair',
+          component: tenantRepair
+        }
+      ]
     },
     {
       path: '/landlordMain',
       name: 'landlordMain',
       component: landlordMain,
-      children:[]
+      children:[
+        {
+          path: '/landlordMessage',
+          component: landlordMessage
+        },
+        {
+          path: '/landlordMy',
+          component: landlordMy
+        },
+        {
+          path:'/landlordHouse',
+          component: landlordHouse
+        },
+        {
+          path:'/landlordApply',
+          component: landlordApply
+        },
+        {
+          path:'/landlordRent',
+          component: landlordRent
+        },
+        {
+          path: '/landlordRepair',
+          component: landlordRepair
+        }
+      ]
     },
     {
       path: '/managerMain',

@@ -129,7 +129,7 @@ export default {
         messageContent:messageContent,
         createTime:date,
         createUser:createUser}).then(function (res){
-        //_this.reload();
+        _this.reload();
       });
     },
     updateDialogClosed(){

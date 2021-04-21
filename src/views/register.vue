@@ -29,6 +29,7 @@
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit(form.userName,form.userPwd,form.userRole,form.userSex,form.userPhone,form.userRealName)">注册</el-button>
+        <el-button @click="back">返回</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -49,6 +50,9 @@ export default {
     }
   },
   methods:{
+    back(){
+      this.$router.back()
+    },
     onSubmit(userName,userPwd,userRole,userSex,userPhone,userRealName){
       const _this=this;
       axios.post('user/addUser',{userName:userName,
